@@ -1,0 +1,45 @@
+<h1>Foods</h1>
+<%= link_to "Add New Food", new_food_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Type
+      </th>
+      <th>
+        Best Ingredient
+      </th>
+      <th>
+        Rating
+      </th>
+      <th>
+        Tried it?
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td>
+          <%= link_to (food.description), food_path(food) %>
+        </td>
+        <td>
+          <%= food.best_ingredient %>
+        </td>
+        <td>
+          <%= food.rating %>
+        </td>
+        <td>
+          <%= food.tried %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_food_path(food) %>
+        </td>
+        <td>
+          <%= link_to "Delete", food, method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

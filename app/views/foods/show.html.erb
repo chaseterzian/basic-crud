@@ -1,0 +1,12 @@
+<h1><%= @food.description %></h1>
+
+Best Ingredient:
+<%= @food.best_ingredient %>
+
+Rating:
+<%= @food.rating %>
+
+
+<%= link_to "Edit", edit_food_path(@food) %>
+<%= link_to "Delete", @food, method: :delete %>
+<%= link_to "Back to Foods", root_path %>

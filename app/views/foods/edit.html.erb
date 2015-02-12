@@ -1,0 +1,15 @@
+<h1>Edit Food<h1>
+
+<%= form_for(@food) do |t| %>
+
+Description:
+<%= t.text_field :description %>
+Best Ingredient:
+<%= t.text_field :best_ingredient %>
+Rating:
+<%= t.number_field :rating %>
+Tried?:
+<%= t.check_box :tried %>
+<%= t.submit %>
+
+<% end %>
